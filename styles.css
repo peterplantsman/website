@@ -1,0 +1,107 @@
+/* UNIVERSAL STYLES */
+/* COLOUR SCHEME:
+Green= #7C9939
+*/
+
+* {
+    font-family: 'arial', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+/* PAGE STYLES */
+.container {
+    width: 80vw;
+    margin: auto;
+}
+
+/* HEADER */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0.3rem 0;
+}
+
+#logo {
+    width: 30vw;
+}
+
+#navigation {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+#navigation a {
+    margin: auto 1rem;
+    font-family: 'Lancelot', cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: lowercase;
+}
+
+#navigation a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/* FOOTER */
+header, footer {
+    background-color: #7C9939;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 5rem;
+    padding: 1rem 0;
+}
+
+.footer div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* SLIDER */
+
+.banner div img {
+    width: 100%;
+}
+
+.slick-arrow {
+    display: none!important;
+}
+
+/* CONTENT */
+
+.block-title {
+    text-align: center;
+    margin: 3rem auto;
+    font-family: 'Lancelot', cursive;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+
+.content div {
+    width: 45%;
+}
+
+.content div img {
+    width: 100%;
+}
