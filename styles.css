@@ -79,6 +79,22 @@ header, footer {
     width: 100%;
 }
 
+.banner-text {
+    position: absolute;
+    top: 6rem;
+    color: white;
+    width: 40vw;
+    margin: auto 10vw;
+}
+
+.banner-text {
+    font-size: 2rem;
+}
+
+.banner-text p {
+    font-size: 1.5rem;
+}
+
 .slick-arrow {
     display: none!important;
 }
