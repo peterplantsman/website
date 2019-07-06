@@ -140,3 +140,11 @@ header, footer {
 .benefits li {
     margin: 1rem auto;
 }
+
+/*****************************
+********** FORM *************
+*****************************/
+
+.hpot {
+    display: none;
+}

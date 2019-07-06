@@ -76,9 +76,12 @@ development advice to private gardeners.
           <div>
             <form method="POST" action="https://formspree.io/s.hopkinson87@gmail.com">
               <input placeholder="Name" name="name">
-              <input placeholder="Email">
-              <input placeholder="Phone">
-              <textarea placeholder="Tell me a little about your project!"></textarea>
+              <input placeholder="Email" name="email _replyto">
+              <input placeholder="Phone" name="phone">
+              <textarea placeholder="Tell me a little about your project!" name="project message"></textarea>
+              <div class="hpot">
+                <label>Leave this field empty: <input name="_gotcha"></label>
+              </div>
               <button>Submit</button>
             </form>
           </div>
