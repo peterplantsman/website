@@ -74,6 +74,9 @@ header, footer {
 }
 
 /* SLIDER */
+.banner {
+    position: relative;
+}
 
 .banner div img {
     width: 100%;
@@ -81,7 +84,7 @@ header, footer {
 
 .banner-text {
     position: absolute;
-    top: 6rem;
+    top: 7rem;
     color: white;
     width: 40vw;
     margin: auto 10vw;
@@ -100,13 +103,9 @@ header, footer {
 }
 
 .overlay {
-    /* position:absolute; */
-    /* top:0;
-    left:0;
-    right:0;
-    bottom:0; */
-    background-color:rgba(0, 0, 0, 0.85);
-    z-index:2;
+   
+    background: linear-gradient(45deg, black, transparent);
+    z-index:2000;
 }
 
 
