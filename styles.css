@@ -74,38 +74,27 @@ header, footer {
 }
 
 /* SLIDER */
+
 .banner {
+    background: url("images/landscape.jpg") no-repeat fixed center;
+    width: 100vw;
+    min-height: 20rem;
     position: relative;
 }
 
-.banner div img {
-    width: 100%;
-}
-
-.banner-text {
-    position: absolute;
-    top: 7rem;
-    color: white;
-    width: 40vw;
-    margin: auto 10vw;
-}
-
-.banner-text {
-    font-size: 1.3rem;
-}
-
-.banner-text p {
-    font-size: 1.5rem;
-}
-
-.slick-arrow {
-    display: none!important;
-}
-
 .overlay {
-   
-    background: linear-gradient(45deg, black, transparent);
+    background: linear-gradient(45deg, black 10%, transparent 70%);
     z-index:2000;
+    min-height: 20rem;
+}
+
+.banner-text {
+    padding: 7rem 1rem;
+    color: white;
+}
+
+.banner-text h1 {
+    margin-top: 0;
 }
 
 
@@ -147,4 +136,16 @@ header, footer {
 
 .hpot {
     display: none;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input,
+.form textarea {
+    padding: 1rem;
+    margin: 0.2rem 0;
+    border-radius: 0.3rem;
 }
