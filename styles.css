@@ -26,6 +26,11 @@ body {
     padding: 0.3rem 0;
 }
 
+.navbar a {
+    text-decoration: none;
+    color: black;
+}
+
 #logo {
     width: 30vw;
 }
@@ -37,9 +42,9 @@ body {
 }
 
 #navigation a {
-    margin: auto 1rem;
+    margin: auto 0.5rem;
     font-family: 'Lancelot', cursive;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
     text-transform: lowercase;
 }
@@ -49,34 +54,10 @@ body {
     cursor: pointer;
 }
 
-/* FOOTER */
-header, footer {
-    background-color: #7C9939;
-}
-.footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    min-height: 5rem;
-    padding: 1rem 0;
-}
-
-.footer div ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-.social-icons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-/* SLIDER */
+/* BANNER */
 
 .banner {
-    background: url("images/landscape.jpg") no-repeat fixed center;
+    background: url("images/landscape.jpg") no-repeat center;
     width: 100vw;
     min-height: 20rem;
     position: relative;
@@ -149,3 +130,64 @@ header, footer {
     margin: 0.2rem 0;
     border-radius: 0.3rem;
 }
+
+/* FOOTER */
+header, footer {
+    background-color: #7C9939;
+}
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 5rem;
+    padding: 1rem 0;
+}
+
+.footer div ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/*****************************
+********** Media Queries ******
+*****************************/
+
+@media screen and (max-width: 370px) {
+    #navigation {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 370px) {
+    .footer {
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 576px) {
+    #navigation a {
+        font-size: 1.5rem;
+        margin: auto 1rem;
+    }
+    .banner-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
