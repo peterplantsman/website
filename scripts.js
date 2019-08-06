@@ -28,3 +28,10 @@ $(document).ready(function(){
 // DROPDOWN
 
 document.getElementById("dropdown");
+
+
+// FADE IN PAGE
+
+$(document).ready(function(){
+  $('#wrapper').fadeIn(1200);
+});
