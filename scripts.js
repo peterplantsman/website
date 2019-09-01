@@ -36,16 +36,10 @@ $(document).ready(function(){
 
 // DROPDOWN
 
-// $("#dropdown").hover(function(){
+// $("#dropdown").mouseover(function(){
 //   $("#dropdown-content").slideDown();
-//   }, function(){
-//     $("#dropdown-content").slideUp();
-//   });
+// });
 
-$("#dropdown").mouseover(function(){
-  $("#dropdown-content").slideDown();
-});
-
-$("#dropdown-content").mouseleave(function(){
- $("#dropdown-content").slideUp();
-});
+// $("#dropdown-content").mouseleave(function(){
+//  $("#dropdown-content").slideUp();
+// });
