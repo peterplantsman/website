@@ -34,12 +34,3 @@ $(document).ready(function(){
   $('#wrapper').fadeIn(1200);
 });
 
-// DROPDOWN
-
-// $("#dropdown").mouseover(function(){
-//   $("#dropdown-content").slideDown();
-// });
-
-// $("#dropdown-content").mouseleave(function(){
-//  $("#dropdown-content").slideUp();
-// });
