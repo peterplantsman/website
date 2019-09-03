@@ -10,6 +10,7 @@ body {
     margin: 0;
 }
 
+
 /* PAGE STYLES */
 .container {
     width: 80vw;
@@ -34,10 +35,6 @@ body {
     color: black;
 }
 
-#logo {
-    width: 30vw;
-}
-
 #navigation {
     display: flex;
     flex-wrap: nowrap;
@@ -45,6 +42,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width:50%;
+    padding: 1rem 0;
 }
 
 #navigation a {
@@ -126,6 +124,7 @@ body {
     /* width: 100vw; */
     min-height: 30rem;
     position: relative;
+    border-top: darkgreen 0.5rem solid;
 }
 
 .overlay {
@@ -146,6 +145,28 @@ body {
 
 
 /* CONTENT */
+
+.reasons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.reasons-box {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    width: 30%;
+    text-align: center;
+}
+
+.reasons-box i {
+    font-size: 9rem;
+    height: 10rem;
+    color: #7C9939;
+}
 
 .block-title {
     text-align: center;
@@ -244,11 +265,16 @@ header, footer {
     #navigation {
         display: none;
     }
+    
 }
 
 @media screen and (min-width: 370px) {
     .footer {
         flex-direction: column;
+    }
+    #logo {
+        position: initial;
+        width: 33vw;
     }
 }
 
@@ -275,7 +301,11 @@ header, footer {
 }
 
 @media (min-width: 992px) {
-  
+    #logo {
+        position: absolute;
+        z-index: 100;
+        top: 2rem;
+    }
 }
 
 @media (min-width: 1200px) {}
