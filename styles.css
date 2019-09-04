@@ -1,6 +1,8 @@
 /* UNIVERSAL STYLES */
 /* COLOUR SCHEME:
 Green= #7C9939
+Darker Green = #5b7029
+Lightest green = #eaf1da
 */
 
 * {
@@ -19,6 +21,10 @@ body {
 
 #wrapper {
     display: none;
+}
+
+.light-background {
+    background-color: #eaf1da;
 }
 
 /* HEADER */
@@ -42,7 +48,6 @@ body {
     align-items: center;
     justify-content: space-between;
     width:50%;
-    padding: 1rem 0;
 }
 
 #navigation a {
@@ -78,6 +83,7 @@ body {
     height: 100%;
     width: 30%;
     cursor: pointer;
+    padding: 2rem 0
 }
 
 #dropdown-content {
@@ -92,7 +98,7 @@ body {
   overflow: auto;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   padding: 12px 16px;
-  top: 110px;
+  top: 120px;
   z-index: 1;
   border-radius: 5px;
 }
@@ -124,7 +130,7 @@ body {
     /* width: 100vw; */
     min-height: 30rem;
     position: relative;
-    border-top: darkgreen 0.5rem solid;
+    border-top: #5b7029 0.5rem solid;
 }
 
 .overlay {
@@ -166,6 +172,19 @@ body {
     font-size: 9rem;
     height: 10rem;
     color: #7C9939;
+}
+
+.reasons-box p {
+    font-size: 1.3rem;
+}
+
+.whyplant {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.whyplant p {
+    font-size: 1.3rem;
 }
 
 .block-title {
@@ -276,6 +295,9 @@ header, footer {
         position: initial;
         width: 33vw;
     }
+    .reasons-box {
+        width: 80%;
+    }
 }
 
 @media screen and (min-width: 576px) {
@@ -298,6 +320,9 @@ header, footer {
     #navigation div {
         font-size: 1.5rem;
     }
+    .reasons-box {
+        width: 40%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -305,6 +330,9 @@ header, footer {
         position: absolute;
         z-index: 100;
         top: 2rem;
+    }
+    .reasons-box {
+        width: 27%;
     }
 }
 
