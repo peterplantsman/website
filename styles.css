@@ -187,13 +187,7 @@ body {
     font-size: 1.3rem;
 }
 
-.block-title {
-    text-align: center;
-    margin: 3rem auto;
-    width: 40%;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid black;
-}
+
 
 .content {
     display: flex;
@@ -277,6 +271,49 @@ header, footer {
 }
 
 /*****************************
+********Ready Reckoner ******
+*****************************/
+
+.ready {
+    margin-top: 10rem;
+}
+
+/*****************************
+********SMALL SCREENS DROPDOWN ******
+*****************************/
+.menuham {
+    display: inline-block;
+    cursor: pointer;
+  }
+
+  .flex-menu-rule {
+      display: flex;
+    align-items: center;
+  }
+  
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+  
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  
+  .change .bar2 {opacity: 0;}
+  
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+
+
+/*****************************
 ********** Media Queries ******
 *****************************/
 
@@ -297,6 +334,16 @@ header, footer {
     }
     .reasons-box {
         width: 80%;
+    }
+    .block-title {
+        text-align: center;
+        margin: 3rem auto;
+        width:90%;
+        padding-bottom: 2rem;
+        border-bottom: 3px solid black;
+    }
+    #menuham {
+        display: none;
     }
 }
 
@@ -323,9 +370,25 @@ header, footer {
     .reasons-box {
         width: 40%;
     }
+    .block-title {
+        width:50%;
+    }
 }
 
+/* THIS IS WHERE WE DISAPPEAR THE NAV */
+@media (max-width:992px){
+#navigation {
+    display: none;
+}
+
+}
+/* THIS IS END OF DISAPPEARING THE NAV */
+
 @media (min-width: 992px) {
+    .flex-menu-rule {
+        display: none;
+    }
+
     #logo {
         position: absolute;
         z-index: 100;
@@ -333,6 +396,9 @@ header, footer {
     }
     .reasons-box {
         width: 27%;
+    }
+    .slicknav_menu {
+        display:none;
     }
 }
 

@@ -34,3 +34,8 @@ $(document).ready(function(){
   $('#wrapper').fadeIn(1200);
 });
 
+// CONTROLLING THE DROPDOWN MENU.
+
+function myFunction(x) {
+  x.classList.toggle("change");
+}
