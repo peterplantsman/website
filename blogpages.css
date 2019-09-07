@@ -2,13 +2,7 @@
     width: 50vw;
 }
 
-.blognav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-}
+
 
 .blogtitle {
     display: flex;
@@ -55,4 +49,30 @@
     height:20rem;
     width: 30%;
     margin-bottom: 1rem;
+}
+
+@media (min-width: 370px) {
+    .blognav {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    #bloglogo {
+        width: 100vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .blognav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    #bloglogo {
+        width: 50vw;
+    }
 }
