@@ -11,37 +11,35 @@
     <link rel=stylesheet href="blogpages.css">
   </head>
   <body>
-    <div id="wrapper">
+    <div>
 <!-- LOGO, NAVBAR -->
-  <header>
-    <div class="container">
-    <div class="navbar">
-      <a href="index.html"><img id="logo" src="images/logo.png"></a>
-    <div id="navigation">
-      <div id="dropdown" class="dropdown"><i class="fa fa-fw fa-pagelines"></i>Knowledge
-        <div id="dropdown-content">
-        <a href="about.html">About me</a>
-        <a href="index.html#reasons">Reasons to create a new garden</a>
-        <a href="index.html#whyplant">Why a Plantsman?</a>
-      </div>
-      </div>
-      
-      <a href="#contact"><i class="fa fa-fw fa-envelope"></i>Contact</a>
-      <a href="ready-reckoner.html"><i class="fa fa-th-large" aria-hidden="true"></i>Ready Reckoner</a>
-    </div>
+<header>
+  <div class="container">
+  <div class="blognav">
+    <a href="index.html"><img id="bloglogo" src="images/logo.png"></a>
+    <div class="blogtitle">
+    <div>My Blog</div>
+    <a id="backlink" href="index.html"><i class="fa fa-fw fa-pagelines"></i>Back</a>   
   </div>
-    </div> 
-  </header>
+</div>
+  </div> 
+</header>
 
-<div class="container">
-    <div class="blog-grid">
-        <div></div>
-        <div></div>
-        <div></div>
-    </div>
+<div class="container blogheader">
+  <h3>This is my blog.</h3>
+  <p>This is a place to share some expertise, perhaps discussing a plant or plant-type you think would be good for each given month. You might also discuss a practice in gardening. This could feature a video of you talking about it. Or being interviewed. </p>
 </div>
 
-
+<div class="container">
+  <div class="blog-grid">
+      <div>blog 1</div>
+      <div>video 1</div>
+      <div>plant of the month</div>
+      <div>blog 1</div>
+      <div>video 1</div>
+      <div>plant of the month</div>
+  </div>
+</div>
 
  <!-- FOOTER -->
  <footer>
@@ -84,6 +82,13 @@
   </footer>
 </div> <!-- END OF PAGE FADE WRAPPER -->
 
-<script src="scripts.js"></script>
+<script>
+var mobile = $('#mobile-menu');
+
+function myFunction(x) {
+  x.classList.toggle("change");
+  mobile.toggleClass("showme");
+}
+</script>
 </body>
 </html>

@@ -1,4 +1,58 @@
+#bloglogo {
+    width: 50vw;
+}
+
+.blognav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.blogtitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.blogtitle div {
+    border-bottom: 5px solid black; 
+    font-size: 4rem;
+}
+
+#backlink {
+    font-size: 4rem;
+    color: white;
+    text-decoration: none;
+}
+
+/************ BLOG SECTION **************/
+
+.blogheader {
+    font-size: 2rem;
+}
 .blog-grid {
     display: flex;
     flex-direction: row;
+}
+
+#backlink {
+}
+
+.blog-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 6rem auto;
+}
+
+.blog-grid div {
+    background-color: lightgrey;
+    height:20rem;
+    width: 30%;
+    margin-bottom: 1rem;
 }

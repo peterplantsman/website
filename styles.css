@@ -244,6 +244,7 @@ body {
     margin: 0.2rem 0;
     border-radius: 0.3rem;
     font-weight: bold;
+    font-size: 1.5rem;
 }
 
 /* FOOTER */
@@ -285,6 +286,10 @@ header, footer {
     display: inline-block;
     cursor: pointer;
   }
+
+.showme {
+    display: flex!important; 
+}
 
   .flex-menu-rule {
       display: flex;
@@ -330,7 +335,7 @@ header, footer {
     }
     #logo {
         position: initial;
-        width: 33vw;
+        width: 65vw;
     }
     .reasons-box {
         width: 80%;
@@ -342,19 +347,65 @@ header, footer {
         padding-bottom: 2rem;
         border-bottom: 3px solid black;
     }
-    #menuham {
+    #mobile-menu {
         display: none;
+        z-index: 100;
+        margin-top: -2px;
+        font-size: 2rem!important;
+        margin: 0;
+        border-top: 1px white solid;
+        padding: 1rem 0;
+        width: 100%!important;
+        flex-direction: column;
+        align-items: center;
+        background-color: #7C9939;
+        border-top-width: 0px;
+        border-top: 0.5rem solid #5b7029;
     }
+
+    #mobile-menu a {
+        padding: 1rem 0.5rem;
+        margin: 0.2rem 0;
+        color: black;
+        text-decoration: none;
+        background-color: #5b7029;
+        width: 80%;
+        text-align: center;
+    }
+
+    #mobile-menu a:hover {
+        background-color: #eaf1da;
+    }
+    .contact-area {
+        flex-wrap: wrap;
+    }
+    .contact-area div {
+        width: 100%;
+        text-align: center;
+    }
+    .contact-message {
+        width: 80%!important;
+        margin: auto auto;
+    }
+   
 }
 
 @media screen and (min-width: 576px) {
     
+    #logo {
+        position: initial;
+        width: 33vw;
+    }
+
     .banner-text h1 {
         font-size: 3.5rem;
     }
     #navigation a,
     #navigation div {
         font-size: 1.5rem;
+    }
+    #mobile-menu a {
+        width: 50%;
     }
 }
 
@@ -372,6 +423,9 @@ header, footer {
     }
     .block-title {
         width:50%;
+    }
+    .contact-area div {
+        width: 45%;
     }
 }
 
@@ -396,9 +450,6 @@ header, footer {
     }
     .reasons-box {
         width: 27%;
-    }
-    .slicknav_menu {
-        display:none;
     }
 }
 
