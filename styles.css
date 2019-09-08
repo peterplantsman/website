@@ -289,6 +289,8 @@ header, footer {
 
 .showme {
     display: flex!important; 
+    transition-duration: 500ms;
+
 }
 
   .flex-menu-rule {
@@ -384,7 +386,7 @@ header, footer {
         text-align: center;
     }
     .contact-message {
-        width: 80%!important;
+        width: 80%;
         margin: auto auto;
     }
    
@@ -407,6 +409,7 @@ header, footer {
     #mobile-menu a {
         width: 50%;
     }
+    
 }
 
 
@@ -441,6 +444,10 @@ header, footer {
 @media (min-width: 992px) {
     .flex-menu-rule {
         display: none;
+    }
+    .contact-message {
+        width: 45%;
+        margin: auto auto;
     }
 
     #logo {
