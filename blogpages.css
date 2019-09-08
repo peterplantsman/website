@@ -33,7 +33,16 @@
     flex-direction: row;
 }
 
-#backlink {
+#feature-post {
+    width: 60%;
+}
+
+#feature-video {
+    width: 60%;
+}
+
+#feature-plant {
+    width: 95%;
 }
 
 .blog-grid {
