@@ -1,4 +1,4 @@
-sitemap:https://magnolia-beauty-suite.com/sitemap.xml
+sitemap:https://petertheplantsman.co.uk/sitemap.xml
 
 user-agent: *
 Allow:/
