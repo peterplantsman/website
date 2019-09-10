@@ -28,6 +28,10 @@ body {
 }
 
 /* HEADER */
+.topborder {
+    border-top: #5b7029 0.5rem solid;
+}
+
 .navbar {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -162,7 +166,6 @@ body {
 
 .banner {
     background: url("images/landscape.jpg") no-repeat 100% center;
-    /* width: 100vw; */
     min-height: 30rem;
     position: relative;
     border-top: #5b7029 0.5rem solid;
@@ -547,6 +550,7 @@ header, footer {
 /* THIS IS END OF DISAPPEARING THE NAV */
 
 @media (min-width: 992px) {
+    
     .flex-menu-rule {
         display: none;
     }
