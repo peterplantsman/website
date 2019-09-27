@@ -11,7 +11,7 @@
     <link rel=stylesheet href="blogpages.css">
   </head>
   <body>
-    <div>
+    <div id="wrapper">
 <!-- LOGO, NAVBAR -->
 <header>
   <div class="container">
@@ -27,18 +27,49 @@
 
 <div class="container blogheader">
   <h3>This is my blog.</h3>
-  <p>This is a place to share some expertise, perhaps discussing a plant or plant-type you think would be good for each given month. You might also discuss a practice in gardening. This could feature a video of you talking about it. Or being interviewed. </p>
+  <p>Here, I'll offer advice and information on plants you may want to consider incorporating in your own garden, as well as hints and tips on how to make the most of the space you have.</p>
 </div>
 
 <div class="container">
   <div class="blog-grid">
-      <div id="feature-post">blog 1</div>
+      <div id="blog1" class="feature-post" style="background: url('images/feature1.jpg') no-repeat center; background-size: cover;">
+        <p>Monthly Feature</p>
+      </div>
+      <div id="content1">
+        <p></p>
+      </div>
       
-      <div>plant of the month</div>
-      <div>blog 1</div>
+      <div id="blog2" class="feature-plant" style="background: url('images/flower-of-the-month.jpg') no-repeat center; background-size: cover;"><p>plant of the month</p></div>
+      <div id="content2">
+          <p></p>
+        </div>
+      
+      <div id="blog3" class="feature-plant" style="background: url('images/feature2.jpg') no-repeat center; background-size: cover;">
+        <p>
+          Getting Started
+        </p>
+      </div>
+      <div id="content3">
+          <p></p>
+        </div>
 
-      <div id="feature-video">video 1</div>
-      <div id="feature-plant">plant of the month</div>
+      <div id="blog4" class="feature-video" style="background: url('images/feature5.jpg') no-repeat center;background-size: cover;" >
+        <p>
+          Plantsman's Lesson
+        </p>
+      </div>
+      <div id="content4">
+          <p></p>
+        </div>
+
+      <div id="blog5" class="banner-post" style="background: url('images/landscape.jpg') no-repeat center; background-size: cover;"><p>
+        In the news
+      </p>
+    </div>
+    <div id="content5">
+        <p></p>
+      </div>
+
   </div>
 </div>
 
@@ -81,5 +112,6 @@ function myFunction(x) {
   mobile.toggleClass("showme");
 }
 </script>
+<script src="scripts.js"></script>
 </body>
 </html>
