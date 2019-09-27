@@ -57,17 +57,22 @@ var content5 = $('#content5')
 
 
 
-// add hover instructions for divs.
+// Toggle classes on click. 
+// Add class for button clicked, and then make all other blog buttons appear disabled.
 
-// todo: change blog width on click
+// Display instructions for blog grid.
 
 blog1.click(function(){
   if (content1.css("display") == "none") {
     blog1.css("margin-bottom", "0");
     blog1.animate({
       height: "10rem",
-      width: "100%",
+      width: "60%",
         }, 500);
+        blog2.animate({
+          height: "10rem",
+          width: "30%",
+        })
   content1.slideDown(1000);
   } 
   else {
@@ -83,6 +88,10 @@ blog1.click(function(){
         height: "20rem",
         width: "60%",
       }, 500);
+      blog2.animate({
+        height: "20rem",
+        width: "30%"
+      })
     }
     content1.slideUp(1000);
     blog1.css("margin-bottom", "1rem");
