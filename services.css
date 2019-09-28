@@ -38,7 +38,6 @@ header {
     font-size: 2rem;
 }
 
-
 #content1,
 #content2,
 #content3,
@@ -48,28 +47,33 @@ header {
     width:100%;
     margin-top: 0;
     background-color: lightgrey;
+    height: 10rem;
 }
 
-.activate {
-
+#content3 {
+    height: 15rem!important;
 }
 
-
-
-.deactivate {
-    position: fixed; /* Sit on top of the page content */
-    display: none; /* Hidden by default */
-    width: 100%; /* Full width (cover the whole page) */
-    height: 100%; /* Full height (cover the whole page) */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-    z-index: 200; /* Specify a stack order in case you're using a different order for other elements */
-    cursor: pointer; /* Add a pointer on hover */
+#content4 {
+    height: 35rem!important;
 }
 
+#content5 {
+    height: 20rem!important;
+}
+
+#content1 p,
+#content2 p,
+#content3 p,
+#content4 p,
+#content5 p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+    padding: 1rem;
+    color: black;
+}
 
 /******************************************
 ***********MEDIA QUERIES*******************
@@ -155,7 +159,7 @@ header {
         justify-content: space-around;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin: 6rem auto;
+    margin: 3rem auto;
 }
 
 .blog-grid div {
