@@ -1,4 +1,4 @@
-sitemap:https://petertheplantsman.co.uk/sitemap.xml
+sitemap:http://petertheplantsman.com/sitemap.xml
 
 user-agent: *
 Allow:/
