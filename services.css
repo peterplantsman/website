@@ -47,19 +47,18 @@ header {
     width:100%;
     margin-top: 0;
     background-color: lightgrey;
-    height: 10rem;
 }
 
 #content3 {
-    height: 15rem!important;
+    /* height: 15rem!important; */
 }
 
 #content4 {
-    height: 35rem!important;
-}
+    /* height: 35rem!important; */
+} 
 
 #content5 {
-    height: 20rem!important;
+    /* height: 20rem!important; */
 }
 
 #content1 p,
@@ -164,8 +163,12 @@ header {
 
 .blog-grid div {
     background-color: lightgrey;
-    height:10rem;
     margin-bottom: 1rem;
+}
+
+.blog-grid div h2 {
+    text-align: center;
+    text-decoration: underline;
 }
 
 .blog-grid div p {
@@ -235,16 +238,18 @@ header {
     .banner-post {
         width: 95%;
     }
-    
-    
-    .blog-grid div {
+
+    #blog1,
+    #blog2,
+    #blog3,
+    #blog4,
+    #blog5 {
         height:20rem;
     }
     
     .blog-grid div p {
         font-size: 1.7rem;
     }
-  
 }
 
 @media (min-width: 992px) {

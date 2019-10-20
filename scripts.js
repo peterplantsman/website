@@ -71,7 +71,8 @@ blog1.click(function(){
       content4.slideUp(500);
       content5.slideUp(500);
   }
-  if (content1.css("display") == "none") {
+  // Widens content box
+  if ((content1.css("display") == "none") && ($(window).width() > 768)) {
     blog1.animate({
       height: "10rem",
       width: "60%",
@@ -80,15 +81,14 @@ blog1.click(function(){
           height: "10rem",
           width: "30%",
         })
+  // Reveals content
   content1.slideDown(700);
   } 
-  else {
-    if($(window).width() < 768) {
-    blog1.animate({
-      height: "10rem",
-      width: "90%",
-    }, 500);
-    } else if(
+  else if ((content1.css("display") == "none") && ($(window).width() > 768)) {
+    content1.slideDown(700);
+  }
+  else if (content1.css("display") != "none") {
+    if (
       $(window).width() > 768
     ) {
       blog1.animate({
@@ -99,12 +99,20 @@ blog1.click(function(){
         height: "20rem",
         width: "30%"
       })
+      content1.slideUp(1000);
+      blog1.css("margin-bottom", "1rem");
     }
-    content1.slideUp(1000);
-    blog1.css("margin-bottom", "1rem");
-
+    else if ($(window).width() < 768) {
+      content1.slideUp(1000);
+    }
   }
+  else {
+    if($(window).width() < 768) {
+    content1.slideDown(700);
+    }
+  }; 
 });
+  
 
 
 // SECOND BOX
