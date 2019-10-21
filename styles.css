@@ -28,6 +28,10 @@ body {
 }
 
 /* HEADER */
+header {
+    background-image: linear-gradient(#7C9939 50%, #5b7029);
+}
+
 .topborder {
     border-top: #5b7029 0.5rem solid;
 }
@@ -319,7 +323,7 @@ body {
 }
 
 /* FOOTER */
-header, footer {
+footer {
     background-color: #7C9939;
 }
 .footer {
