@@ -433,6 +433,15 @@ footer {
 }
 
 @media screen and (min-width: 370px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about div {
+        width: 90%;
+        margin: auto;
+    }
     .footer {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -524,6 +533,13 @@ footer {
 
 
 @media (min-width: 768px) {
+    .about {
+        flex-direction: row;
+    }
+
+    .about div {
+        width: 45%;
+    }
     .footer {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
