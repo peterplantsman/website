@@ -169,6 +169,7 @@ header {
 /* BANNER */
 
 .banner {
+    background-size: cover!important;
     background: url("images/landscape.jpg") no-repeat 100% center;
     min-height: 30rem;
     position: relative;
