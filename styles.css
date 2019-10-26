@@ -548,7 +548,7 @@ footer {
     }
     #navigation a,
     #navigation div {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .reasons-box {
         width: 40%;
@@ -571,7 +571,7 @@ footer {
 /* THIS IS END OF DISAPPEARING THE NAV */
 
 @media (min-width: 992px) {
-    
+   
     .flex-menu-rule {
         display: none;
     }
@@ -590,4 +590,9 @@ footer {
     }
 }
 
-@media (min-width: 1200px) {}
+@media (min-width: 1200px) {
+    #navigation a,
+    #navigation div {
+        font-size: 1.5rem;
+    }
+}
