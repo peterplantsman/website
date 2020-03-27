@@ -24,3 +24,21 @@ $(document).ready(function(){
     } // End if
   });
 });
+
+
+
+// FADE IN PAGE
+
+$(document).ready(function(){
+  $('#wrapper').fadeIn(1200);
+});
+
+// CONTROLLING THE DROPDOWN MENU.
+
+var mobile = $('#mobile-menu');
+
+function myFunction(x) {
+  x.classList.toggle("change");
+  mobile.toggleClass("showme");
+}
+

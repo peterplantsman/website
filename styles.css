@@ -57,9 +57,10 @@ body {
 /* BANNER */
 
 .banner {
-    background: url("images/landscape.jpg") no-repeat center;
     width: 100vw;
-    min-height: 20rem;
+    background-size: cover!important;
+    background: url("images/peter_garden_edit.jpg") no-repeat 100% center;
+    min-height: 30rem;
     position: relative;
 }
 
