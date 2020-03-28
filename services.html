@@ -48,14 +48,16 @@
         <div id="services-grid" class="blog-grid">
             <div id="blog1"
                  class="feature"
-                 v-on:click="toggleBox"
+                 @click="toggleBox"
                  style="background: url('images/feature1.jpg') no-repeat center; background-size: cover;">
                 <div class="service-text">
                     <p>Advice and Consultation</p>
                 </div>
             </div>
+
+
             <transition name="slide">
-                <div id="content1" v-if="toggle1">
+                <div id="content1" v-if="toggled.includes('blog1')">
                     <p>I offer site visits to appraise your current garden and offer any advice you may wish for on the
                         plants and layout that you have already. I will also provide you with my simple questionnaire
                         that
@@ -66,7 +68,7 @@
             </transition>
 
             <div id="blog2" class="feature"
-                 v-on:click="toggleBox"
+                 @click="toggleBox"
                  style="background: url('images/flower-of-the-month.jpg') no-repeat center; background-size: cover;">
                 <div class="service-text">
                     <p>Creating a Plan</p>
@@ -74,7 +76,7 @@
             </div>
 
             <transition name="slide">
-                <div id="content2" v-if="toggle2">
+                <div id="content2" v-if="toggled.includes('blog2')">
                     <p>I can measure your garden and create an accurate scale drawing, showing all of the key features
                         as
                         they exist currently. This is the base plan upon which I would create a new design.
@@ -86,7 +88,7 @@
             </transition>
 
             <div id="blog3" class="feature"
-                 v-on:click="toggleBox"
+                 @click="toggleBox"
                  style="background: url('images/feature2.jpg') no-repeat center; background-size: cover;">
                 <div class="service-text">
                     <p>
@@ -96,7 +98,7 @@
             </div>
 
             <transition name="slide">
-                <div id="content3" v-if="toggle3">
+                <div id="content3" v-if="toggled.includes('blog3')">
                     <p>My approach is to consider all of requirements as identified using my unique questionnaire, and
                         to
                         create a design and planting scheme that accommodates these. The design will also reflect the
@@ -112,7 +114,7 @@
             </transition>
 
             <div id="blog4" class="feature"
-                 v-on:click="toggleBox"
+                 @click="toggleBox"
                  style="background: url('images/feature5.jpg') no-repeat center;background-size: cover;">
                 <div class="service-text">
                     <p>
@@ -122,7 +124,7 @@
             </div>
 
             <transition name="slide">
-                <div id="content4" v-if="toggle4">
+                <div id="content4" v-if="toggled.includes('blog4')">
                     <h2>Clearing and preparing the site</h2>
                     <p>It will probably be necessary to remove at least some trees, shrubs, plants and hard landscaping
                         features from your existing garden, and to dig over and improve the soil prior to
@@ -161,7 +163,7 @@
             </transition>
 
             <div id="blog5" class="feature"
-                 v-on:click="toggleBox"
+                 @click="toggleBox"
                  style="background: url('images/landscape.jpg') no-repeat center; background-size: cover;">
                 <div class="service-text">
                     <p>
@@ -171,7 +173,7 @@
             </div>
 
             <transition name="slide">
-                <div id="content5" v-if="toggle5">
+                <div id="content5" v-if="toggled.includes('blog5')">
                     <p>I will happily make an after-care visit once the new planting has been in place for a few weeks
                         to
                         check all is well and answer any questions you may have.</p>
@@ -222,57 +224,23 @@
 </div> <!-- END OF PAGE FADE WRAPPER -->
 
 <script>
-    var mobile = $('#mobile-menu');
-
-    function myFunction(x) {
-        x.classList.toggle("change");
-        mobile.toggleClass("showme");
-    }
-</script>
-
-<script>
     var app = new Vue({
         el: '#services-grid',
         data: {
-            toggle1: false,
-            toggle2: false,
-            toggle3: false,
-            toggle4: false,
-            toggle5: false,
+            toggled: []
         },
         methods: {
             toggleBox: function (event) {
-                if (this.toggle1 || this.toggle2 || this.toggle3 || this.toggle4 || this.toggle5) {
-                    this.toggle1 = false
-                    this.toggle2 = false
-                    this.toggle3 = false
-                    this.toggle4 = false
-                    this.toggle5 = false
+                console.log(this.$emit('toggle-box'))
+                if (this.toggled.length >= 1) {
+                    this.toggled = []
                 }
 
-                let clicked = parseInt(event.target.id.charAt(event.target.id.length - 1))
-                switch (clicked) {
-                    case 1:
-                        this.toggle1 = true
-                        break;
-                    case 2:
-                        this.toggle2 = true
-                        break;
-                    case 3:
-                        this.toggle3 = true
-                        break;
-                    case 4:
-                        this.toggle4 = true
-                        break;
-                    case 5:
-                        this.toggle5 = true
-                        break;
-                }
+                this.toggled.push(event.target.id)
             }
         }
     })
 </script>
-
 
 <script src="scripts.js"></script>
 </body>
