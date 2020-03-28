@@ -11,12 +11,12 @@
         }
 
         gtag('js', new Date());
-
         gtag('config', 'UA-149277002-1');
     </script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <title>My Services</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lancelot&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
     <link rel=stylesheet href="styles.css">
     <link rel=stylesheet href="services.css">
 </head>
+
 <body>
 <div id="wrapper">
     <!-- LOGO, NAVBAR -->
@@ -44,108 +45,151 @@
     </div>
 
     <div class="container">
-        <div class="blog-grid">
-            <div id="blog1" class="feature-post"
+        <div id="services-grid" class="blog-grid">
+            <div id="blog1"
+                 class="feature"
+                 v-on:click="toggleBox"
                  style="background: url('images/feature1.jpg') no-repeat center; background-size: cover;">
-                <p>Advice and Consultation</p>
+                <div class="service-text">
+                    <p>Advice and Consultation</p>
+                </div>
             </div>
+            <transition name="slide">
+                <div id="content1" v-if="toggle1">
+                    <p>I offer site visits to appraise your current garden and offer any advice you may wish for on the
+                        plants and layout that you have already. I will also provide you with my simple questionnaire
+                        that
+                        should help you to decide what it is you want your garden to be and be used for.
+                        Sometimes people find that this is all they need, and carry on with their own garden development
+                        with no further input from me.</p>
+                </div>
+            </transition>
 
-            <div id="blog2" class="feature-plant"
+            <div id="blog2" class="feature"
+                 v-on:click="toggleBox"
                  style="background: url('images/flower-of-the-month.jpg') no-repeat center; background-size: cover;">
-                <p>Creating a Plan</p>
+                <div class="service-text">
+                    <p>Creating a Plan</p>
+                </div>
             </div>
 
-            <div id="content1">
-                <p>I offer site visits to appraise your current garden and offer any advice you may wish for on the
-                    plants and layout that you have already. I will also provide you with my simple questionnaire that
-                    should help you to decide what it is you want your garden to be and be used for.
-                    Sometimes people find that this is all they need, and carry on with their own garden development
-                    with no further input from me.</p>
-            </div>
+            <transition name="slide">
+                <div id="content2" v-if="toggle2">
+                    <p>I can measure your garden and create an accurate scale drawing, showing all of the key features
+                        as
+                        they exist currently. This is the base plan upon which I would create a new design.
+                        For some, this base plan is all they want as it gives them the basics on which they can sketch
+                        their
+                        own designs – and have great fun doing it!</p>
+                </div>
 
-            <div id="content2">
-                <p>I can measure your garden and create an accurate scale drawing, showing all of the key features as
-                    they exist currently. This is the base plan upon which I would create a new design.
-                    For some, this base plan is all they want as it gives them the basics on which they can sketch their
-                    own designs – and have great fun doing it!</p>
-            </div>
+            </transition>
 
-            <div id="blog3" class="feature-plant"
+            <div id="blog3" class="feature"
+                 v-on:click="toggleBox"
                  style="background: url('images/feature2.jpg') no-repeat center; background-size: cover;">
-                <p>
-                    Creating a Unique Design
-                </p>
+                <div class="service-text">
+                    <p>
+                        Creating a Unique Design
+                    </p>
+                </div>
             </div>
 
-            <div id="blog4" class="feature-video"
+            <transition name="slide">
+                <div id="content3" v-if="toggle3">
+                    <p>My approach is to consider all of requirements as identified using my unique questionnaire, and
+                        to
+                        create a design and planting scheme that accommodates these. The design will also reflect the
+                        budget
+                        you have set, and your views on how much time you wish to spend gardening in the future.
+                        I hand-draw and colour every design myself, and it’s yours to keep whether you decide to
+                        actually
+                        realise the design or not.
+                        The design will incorporate any hard landscaping features you have requested, as well as a full,
+                        illustrated list of all the plants proposed.
+                    </p>
+                </div>
+            </transition>
+
+            <div id="blog4" class="feature"
+                 v-on:click="toggleBox"
                  style="background: url('images/feature5.jpg') no-repeat center;background-size: cover;">
-                <p>
-                    Making your garden
-                </p>
+                <div class="service-text">
+                    <p>
+                        Making your garden
+                    </p>
+                </div>
             </div>
 
-            <div id="content3">
-                <p>My approach is to consider all of requirements as identified using my unique questionnaire, and to
-                    create a design and planting scheme that accommodates these. The design will also reflect the budget
-                    you have set, and your views on how much time you wish to spend gardening in the future.
-                    I hand-draw and colour every design myself, and it’s yours to keep whether you decide to actually
-                    realise the design or not.
-                    The design will incorporate any hard landscaping features you have requested, as well as a full,
-                    illustrated list of all the plants proposed.
-                </p>
-            </div>
+            <transition name="slide">
+                <div id="content4" v-if="toggle4">
+                    <h2>Clearing and preparing the site</h2>
+                    <p>It will probably be necessary to remove at least some trees, shrubs, plants and hard landscaping
+                        features from your existing garden, and to dig over and improve the soil prior to
+                        re-planting.</p>
+                    <p>You can do this yourself of course (though it can be a lot of hard work!) or get a gardening
+                        contractor to do this for you. I am happy to oversee this stage for you if you wish by a series
+                        of
+                        site visits and meetings with the contractor, or you can manage the contractor yourself.</p>
 
-            <div id="content4">
-                <h2>Clearing and preparing the site</h2>
-                <p>It will probably be necessary to remove at least some trees, shrubs, plants and hard landscaping
-                    features from your existing garden, and to dig over and improve the soil prior to re-planting.</p>
-                <p>You can do this yourself of course (though it can be a lot of hard work!) or get a gardening
-                    contractor to do this for you. I am happy to oversee this stage for you if you wish by a series of
-                    site visits and meetings with the contractor, or you can manage the contractor yourself.</p>
+                    <h2>Building Work</h2>
+                    <p>Any hard landscaping elements you have asked for as part of your new design will require a
+                        competent
+                        builder (unless you are one yourself!). Again, I am happy to oversee this stage for you if you
+                        wish
+                        by a series of site visits and meetings with the contractor, or you can manage this element
+                        yourself
+                        too.</p>
 
-                <h2>Building Work</h2>
-                <p>Any hard landscaping elements you have asked for as part of your new design will require a competent
-                    builder (unless you are one yourself!). Again, I am happy to oversee this stage for you if you wish
-                    by a series of site visits and meetings with the contractor, or you can manage this element yourself
-                    too.</p>
+                    <h2>Sourcing the plants</h2>
+                    <p>I use a number of excellent wholesale suppliers to source plants for the gardens I design, and
+                        will
+                        happily manage this for you. I charge a commission on the plant costs, but even including this I
+                        will usually be able to source plants at well below normal garden centre prices. You can of
+                        course
+                        choose to source your own plants if you prefer.</p>
 
-                <h2>Sourcing the plants</h2>
-                <p>I use a number of excellent wholesale suppliers to source plants for the gardens I design, and will
-                    happily manage this for you. I charge a commission on the plant costs, but even including this I
-                    will usually be able to source plants at well below normal garden centre prices. You can of course
-                    choose to source your own plants if you prefer.</p>
+                    <h2>Planting Out</h2>
+                    <p>Although you could do this part yourself, I recommend that you involve me in this work as the
+                        long-term success of any plant relies heavily on correct planting. This said I encourage people
+                        to
+                        get their hands dirty and help out with the planting – it makes the end result feel much more
+                        your
+                        own creation, it’s very satisfying, and it will save you money.</p>
 
-                <h2>Planting Out</h2>
-                <p>Although you could do this part yourself, I recommend that you involve me in this work as the
-                    long-term success of any plant relies heavily on correct planting. This said I encourage people to
-                    get their hands dirty and help out with the planting – it makes the end result feel much more your
-                    own creation, it’s very satisfying, and it will save you money.</p>
+                </div>
+            </transition>
 
-            </div>
-
-            <div id="blog5" class="banner-post"
+            <div id="blog5" class="feature"
+                 v-on:click="toggleBox"
                  style="background: url('images/landscape.jpg') no-repeat center; background-size: cover;">
-                <p>
-                    Aftercare
-                </p>
+                <div class="service-text">
+                    <p>
+                        Aftercare
+                    </p>
+                </div>
             </div>
 
-            <div id="content5">
-                <p>I will happily make an after-care visit once the new planting has been in place for a few weeks to
-                    check all is well and answer any questions you may have.</p>
-                <p>The ongoing success of your new garden will rely on your care, and I can advise you on what each
-                    plant needs to achieve its full potential. Depending on the size of your garden and the amount of
-                    time you yourself wish to spend on it, you may wish to engage a gardener to help you. I will happily
-                    recommend local gardeners if you wish.</p>
-                <p>If any plant fails due to a health problem it had before planting but which manifests itself only
-                    later, I will of course happily replace it free of chare.</p>
-                <p>After that I am always available by email and will happily advise you ongoing as the seasons roll on
-                    and your garden matures and flourishes.</p>
-            </div>
-
+            <transition name="slide">
+                <div id="content5" v-if="toggle5">
+                    <p>I will happily make an after-care visit once the new planting has been in place for a few weeks
+                        to
+                        check all is well and answer any questions you may have.</p>
+                    <p>The ongoing success of your new garden will rely on your care, and I can advise you on what each
+                        plant needs to achieve its full potential. Depending on the size of your garden and the amount
+                        of
+                        time you yourself wish to spend on it, you may wish to engage a gardener to help you. I will
+                        happily
+                        recommend local gardeners if you wish.</p>
+                    <p>If any plant fails due to a health problem it had before planting but which manifests itself only
+                        later, I will of course happily replace it free of chare.</p>
+                    <p>After that I am always available by email and will happily advise you ongoing as the seasons roll
+                        on
+                        and your garden matures and flourishes.</p>
+                </div>
+            </transition>
         </div>
     </div>
-
 
     <!-- FOOTER -->
     <footer>
@@ -185,6 +229,51 @@
         mobile.toggleClass("showme");
     }
 </script>
+
+<script>
+    var app = new Vue({
+        el: '#services-grid',
+        data: {
+            toggle1: false,
+            toggle2: false,
+            toggle3: false,
+            toggle4: false,
+            toggle5: false,
+        },
+        methods: {
+            toggleBox: function (event) {
+                if (this.toggle1 || this.toggle2 || this.toggle3 || this.toggle4 || this.toggle5) {
+                    this.toggle1 = false
+                    this.toggle2 = false
+                    this.toggle3 = false
+                    this.toggle4 = false
+                    this.toggle5 = false
+                }
+
+                let clicked = parseInt(event.target.id.charAt(event.target.id.length - 1))
+                switch (clicked) {
+                    case 1:
+                        this.toggle1 = true
+                        break;
+                    case 2:
+                        this.toggle2 = true
+                        break;
+                    case 3:
+                        this.toggle3 = true
+                        break;
+                    case 4:
+                        this.toggle4 = true
+                        break;
+                    case 5:
+                        this.toggle5 = true
+                        break;
+                }
+            }
+        }
+    })
+</script>
+
+
 <script src="scripts.js"></script>
 </body>
 </html>
