@@ -231,12 +231,17 @@
         },
         methods: {
             toggleBox: function (event) {
-                console.log(this.$emit('toggle-box'))
-                if (this.toggled.length >= 1) {
+                let clicked = event.target.id
+
+                if (this.toggled.length >= 1 && clicked == this.toggled[0]) {
                     this.toggled = []
+                } else if (this.toggled.length >= 1 && clicked != this.toggled[0]) {
+                    this.toggled = []
+                    this.toggled.push(event.target.id)
+                } else if (this.toggled.length == 0) {
+                    this.toggled.push(event.target.id)
                 }
 
-                this.toggled.push(event.target.id)
             }
         }
     })
