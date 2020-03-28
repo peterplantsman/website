@@ -12,6 +12,12 @@ body {
     margin: 0;
 }
 
+p a,
+li a {
+    text-decoration: underline;
+    color: inherit;
+}
+
 
 /* PAGE STYLES */
 .container {

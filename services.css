@@ -74,6 +74,14 @@ header {
     font-size: 2rem;
 }
 
+#blog1,
+#blog2,
+#blog3,
+#blog4,
+#blog5 {
+    cursor: pointer;
+}
+
 #content1,
 #content2,
 #content3,
@@ -91,7 +99,6 @@ header {
     text-align: center;
     font-size: 1.3rem;
 }
-
 
 #content1 p,
 #content2 p,
