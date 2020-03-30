@@ -37,7 +37,7 @@
     </header>
     <div class="topborder"></div>
 
-<div class="container ready">
+<div class="container">
   <h1>This will be the RR</h1>
 </div>
 
@@ -47,6 +47,46 @@
        </canvas>
 </div>
 
+    <div class="container">
+    <div id="reckoner">
+      <h1>{{ survey.title }}</h1>
+      <!-- index is used to check with current question index -->
+      <div v-for="(question, index) in survey.questions">
+        <!-- Hide all questions, show only the one with index === to current question index -->
+        <div v-show="index === questionIndex">
+          <h2>{{ survey.text }}</h2>
+          <ol>
+            <li v-for="response in question.responses">
+              <label>
+                <!-- The radio button has three new directives -->
+                <!-- v-bind:value sets "value" to "true" if the response is correct -->
+                <!-- v-bind:name sets "name" to question index to group answers by question -->
+                <!-- v-model creates binding with userResponses -->
+                <input type="number"
+                       v-model="userResponses[index]">
+              </label>
+            </li>
+          </ol>
+          <!-- The two navigation buttons -->
+          <!-- Note: prev is hidden on first question -->
+          <button v-if="questionIndex > 0" v-on:click="prev">
+            prev
+          </button>
+          <button v-on:click="next">
+            next
+          </button>
+        </div>
+      </div>
+      <div v-show="questionIndex === survey.questions.length">
+        <h2>
+          Survey finished
+        </h2>
+        <p>
+          Total score: {{ score() }} / {{ survey.questions.length }}
+        </p>
+      </div>
+    </div>
+    </div>
     
 <footer>
   <div class="footer container">
