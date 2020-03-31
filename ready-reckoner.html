@@ -14,6 +14,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Landscape garden design services covering Norfolk, Suffolk and Cambridgeshire.">
   <script src="jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
   <title>Peter the Plantsman</title>
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text|Lancelot&display=swap" rel="stylesheet">
@@ -54,19 +56,14 @@
       <div v-for="(question, index) in survey.questions">
         <!-- Hide all questions, show only the one with index === to current question index -->
         <div v-show="index === questionIndex">
-          <h2>{{ survey.text }}</h2>
-          <ol>
-            <li v-for="response in question.responses">
-              <label>
-                <!-- The radio button has three new directives -->
-                <!-- v-bind:value sets "value" to "true" if the response is correct -->
-                <!-- v-bind:name sets "name" to question index to group answers by question -->
-                <!-- v-model creates binding with userResponses -->
-                <input type="number"
-                       v-model="userResponses[index]">
-              </label>
-            </li>
-          </ol>
+          <h2>{{ question.text }}</h2>
+         <div v-for="answer in question.answers">
+           <label>{{ answer.label }}
+           <input type="number"
+                  v-model="userResponses[answer.key]">
+           </label>
+         </div>
+
           <!-- The two navigation buttons -->
           <!-- Note: prev is hidden on first question -->
           <button v-if="questionIndex > 0" v-on:click="prev">
@@ -82,7 +79,7 @@
           Survey finished
         </h2>
         <p>
-          Total score: {{ score() }} / {{ survey.questions.length }}
+          <p id="result"></p>
         </p>
       </div>
     </div>
@@ -115,7 +112,6 @@
     </div>
 </div>
 </footer>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="readyreck.js"></script>
   </body>
    </html>
