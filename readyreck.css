@@ -1,0 +1,19 @@
+.question {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    margin: auto 1rem;
+    font-size: 1.1rem;
+}
+
+.ready-reckoner {
+    margin: 1rem auto;
+}

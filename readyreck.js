@@ -11,15 +11,16 @@ var survey = {
     title: 'Calculating your garden space',
     questions: [
         {
-            text: "Please enter the dimensions of your garden space. Think of the space as roughly being a rectangle or square.",
+            text: "Please enter the dimensions of your garden space. " +
+                "Think of the space as roughly being a rectangle or square.",
             answers: {
                 gardenLength: {
-                    key: 1,
+                    key: 0,
                     label: "Length (in metres)",
                     value: null
                 },
                 gardenWidth: {
-                    key: 2,
+                    key: 1,
                     label: "Width (in metres)",
                     value: null
                 }
@@ -41,13 +42,19 @@ new Vue({
         // An array initialized with "false" values for each question
         // It means: "did the user answered correctly to the question n?" "no".
         userResponses: [],
+        stageOne: null
     },
     // The view will trigger these methods on click
     methods: {
         // Go to next question
         next: function() {
-            this.questionIndex++;
-            this.store()
+                if (this.userResponses[0] && this.userResponses[1]) {
+                    this.questionIndex++;
+                    this.stageOne = true;
+                    this.store()
+                }
+                // TODO: add else. So: users can't progress. Add an error message explaining why.
+
         },
         // Go to previous question
         prev: function() {
