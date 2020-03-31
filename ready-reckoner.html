@@ -59,10 +59,11 @@
                 <h2>{{ question.text }}</h2>
                 <div v-for="answer in question.answers">
                     <div class="container question">
-                    <label>{{ answer.label }}
-                        <input type="number"
+                    <label>{{ answer.label }}</label>
+                        <div>
+                            <input type="number"
                                v-model="userResponses[answer.key]">
-                    </label>
+                        </div>
                     </div>
                 </div>
 

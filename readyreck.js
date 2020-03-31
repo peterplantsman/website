@@ -28,7 +28,23 @@ var survey = {
         },
         {
           text: "Do you have a shed, or other garden buildings?",
-          value: null
+            answers: {
+                possess: {
+                    key: 4,
+                    label: "Number of sheds/garden buildings",
+                    value: null
+                },
+                shedLength: {
+                  key: 5,
+                    label: "Length (in metres)",
+                    value: null
+                },
+                shedWidth: {
+                  key: 6,
+                    label: "Width (in metres)",
+                    value: null
+                }
+            },
         }
     ]
 };
