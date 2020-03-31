@@ -58,7 +58,8 @@
             <div v-show="index === questionIndex">
                 <h2>{{ question.text }}</h2>
                 <div v-for="answer in question.answers">
-                    <div class="container question">
+                    <div class="container question"
+                         v-bind:class="{ danger : isDanger }">
                     <label>{{ answer.label }}</label>
                         <div>
                             <input type="number"

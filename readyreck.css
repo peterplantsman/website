@@ -21,3 +21,7 @@
 .ready-reckoner {
     margin: 1rem auto;
 }
+
+.danger {
+    border: 1px red solid;
+}

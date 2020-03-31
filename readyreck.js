@@ -30,17 +30,17 @@ var survey = {
           text: "Do you have a shed, or other garden buildings?",
             answers: {
                 possess: {
-                    key: 4,
+                    key: 2,
                     label: "Number of sheds/garden buildings",
                     value: null
                 },
                 shedLength: {
-                  key: 5,
+                  key: 3,
                     label: "Length (in metres)",
                     value: null
                 },
                 shedWidth: {
-                  key: 6,
+                  key: 4,
                     label: "Width (in metres)",
                     value: null
                 }
@@ -53,23 +53,41 @@ new Vue({
     el: '#reckoner',
     data: {
         survey: survey,
-        // Store current question index
         questionIndex: 0,
-        // An array initialized with "false" values for each question
-        // It means: "did the user answered correctly to the question n?" "no".
         userResponses: [],
-        stageOne: null
+        stageOne: null,
+        stageTwo: null,
+        isDanger: false
     },
-    // The view will trigger these methods on click
+
     methods: {
-        // Go to next question
+        // Go to next question, assuming it's been answered.
         next: function() {
-                if (this.userResponses[0] && this.userResponses[1]) {
+            let r = this.userResponses;
+                if (r[0] && r[1]) {
                     this.questionIndex++;
                     this.stageOne = true;
-                    this.store()
+                    this.isDanger = false;
+                    this.store();
+                } else if (!this.stageOne && !r[0] && !r[1]) {
+                    this.isDanger = true;
                 }
-                // TODO: add else. So: users can't progress. Add an error message explaining why.
+
+                if (this.stageOne) {
+                    r[2] = "Not Set";
+                }
+
+                if (this.stageOne && r[2] && r[3] && r[4]) {
+                    console.log(r[3])
+                    console.log(r[4])
+                    this.questionIndex++;
+                    this.stageTwo = true;
+                    this.isDanger = false;
+                    this.store();
+                } else if (!this.stageTwo && (r[2] != "Not Set")) {
+                    this.isDanger = true;
+                    r[2] = null;
+                }
 
         },
         // Go to previous question
