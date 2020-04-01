@@ -1,14 +1,6 @@
-// Canvas instructions
+// The survey variable
 
-// var c = document.getElementById("canvas");
-// var ctx = c.getContext("2d");
-// ctx.beginPath();
-// ctx.rect(20, 20, 150, 100);
-// ctx.stroke();
-
-// Create a quiz object with a title and two questions.
-// A question has one or more answer, and one or more is valid.
-var survey = {
+let survey = {
     title: 'Calculating your garden space',
     questions: [
         {
@@ -58,11 +50,12 @@ new Vue({
         userResponses: [],
         stageOne: false,
         stageTwo: false,
-        isDanger: false
+        isDanger: false,
+        vueCanvas: null,
     },
     mounted: function () {
-        var c = document.getElementById("c");
-        var ctx = c.getContext("2d");
+        let c = document.getElementById("canvas");
+        let ctx = c.getContext("2d");
         this.vueCanvas = ctx;
     },
     methods: {
@@ -90,6 +83,7 @@ new Vue({
                         this.stageTwo = true;
                         this.isDanger = false;
                         this.store();
+                        this.drawRect();
                     } else {
                         this.isDanger = true;
                         // TODO: ADD MESSAGE "If sheds are selected, please enter number".
@@ -110,6 +104,7 @@ new Vue({
         },
         skip: function () {
             this.questionIndex++;
+            this.drawRect();
         },
         // Store the user's answers in a session.
         store: function () {
@@ -120,6 +115,29 @@ new Vue({
         },
         // Open up a new accordion dropdown with the results in it
         showResults: function () {
+        },
+        drawRect: function () {
+            // Define size of canvas
+            let c = document.getElementById("canvas");
+
+            // TODO: Change the height and width by incorporating the x/y coords. eg.
+            c.width = this.userResponses[1]*100 + 30;
+            c.height = this.userResponses[0]*100 + 30;
+            // clear canvas
+            // this.vueCanvas.clearRect(0, 0, 400, 200);
+
+            // draw rect
+            this.vueCanvas.beginPath();
+            this.vueCanvas.fillStyle = "darkGreen";
+            this.vueCanvas.fillRect(20, 20, this.userResponses[1]*100, this.userResponses[0]*100);
+
+            for (let i = 0; i < this.userResponses[2]; i++) {
+                this.vueCanvas.beginPath();
+                this.vueCanvas.fillStyle = "brown";
+                this.vueCanvas.fillRect(40, 30, this.userResponses[3]*100, this.userResponses[4]*100);
+            }
+
+            this.vueCanvas.stroke();
         }
     }
 });
