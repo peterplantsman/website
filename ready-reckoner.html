@@ -75,6 +75,9 @@
                 <button v-on:click="next">
                     next
                 </button>
+                    <button v-if="questionIndex == 1" v-on:click="skip">
+                        skip
+                    </button>
                 </div>
             </div>
         </div>
