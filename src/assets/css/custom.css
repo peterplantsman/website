@@ -1,0 +1,47 @@
+/******* COLOURS *****/
+.primary-text {
+    color: #7C9939;
+}
+
+.secondary-text {
+    color: #5b7029;
+}
+
+.tertiary-text {
+    color: #eaf1da;
+}
+
+.bg-tertiary {
+    background-color: #eaf1da;
+}
+
+.bg-secondary {
+    background-color: #5b7029;
+}
+
+/******* SIZES ******/
+.h-74 {
+    height: 20rem;
+}
+
+.h-86 {
+    height: 24rem;
+}
+
+
+/***** FONT SIZES *******/
+.text-7xl {
+    font-size: 5rem;
+}
+
+.text-8xl {
+    font-size: 6rem;
+}
+
+.text-9xl {
+    font-size: 7rem;
+}
+
+.text-10xl {
+    font-size: 8rem;
+}
