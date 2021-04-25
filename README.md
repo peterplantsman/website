@@ -1,4 +1,4 @@
-# netdev.new_peter.com
+# Peter the Plantsman
 
 ## Project setup
 ```
